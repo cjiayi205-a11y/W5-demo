@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>大學生存指南</title>
+    <title>逢甲美食地圖</title>
     <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
             font-family: "Microsoft JhengHei", Arial, sans-serif;
             max-width: 500px;
@@ -13,29 +15,96 @@
             background-color: #e8f5e9;
             color: #333;
         }
-        h1 {
+
+        header {
+            background-color: #ff6f00;
+            padding: 20px;
             text-align: center;
-            font-size: 1.6em;
+            border-bottom: 2px solid #e65100;
         }
-        .tip {
-            background-color: #fff;
-            border-radius: 12px;
+
+        header h1 {
+            color: #ffffff;
+            font-size: 1.8em;
+        }
+
+        header p {
+            color: #fff3e0;
+            margin-top: 5px;
+        }
+
+        .filter-bar {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
             padding: 15px;
-            margin: 15px 0;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            background-color: #fff;
+            flex-wrap: wrap;
         }
-        .tip h3 {
-            margin: 0 0 8px 0;
+
+        .filter-bar button {
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            background-color: #fff;
+            cursor: pointer;
+            font-size: 0.9em;
         }
-        .tip p {
-            margin: 0;
-            color: #555;
+
+        .filter-bar button.active {
+            background-color: #ff6f00;
+            color: #fff;
+            border-color: #ff6f00;
+        }
+
+        .restaurant-list {
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        .restaurant-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+        }
+
+        .restaurant-card h2 {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .restaurant-card .tag {
+            display: inline-block;
+            background-color: #fff3e0;
+            color: #e65100;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            margin: 8px 4px 8px 0;
+        }
+
+        .restaurant-card .details {
+            color: #666;
+            font-size: 0.9em;
             line-height: 1.6;
         }
-        .footer {
+
+        .restaurant-card .price {
+            font-weight: bold;
+            color: #e65100;
+        }
+
+        .restaurant-card .rating {
+            color: #fbc02d;
+        }
+
+        footer {
             text-align: center;
+            padding: 20px;
             color: #aaa;
-            margin-top: 30px;
             font-size: 0.85em;
         }
     </style>
@@ -67,5 +136,10 @@
     <div class="footer">
         <p>大學生存指南 v1.1 — 月底不吃土攻略 💸</p>
     </div>
+
+    <footer>
+        <p>逢甲美食地圖 &copy; 2025 — 由進階程式設計課程製作</p>
+    </footer>
+
 </body>
 </html>
